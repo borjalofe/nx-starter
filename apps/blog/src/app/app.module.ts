@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NbThemeModule } from '@nebular/theme';
 import { RouterModule, Routes } from '@angular/router';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 import { AppComponent } from './app.component';
-import { ScullyLibModule } from '@scullyio/ng-lib';
 
 const routes:Routes = [
   {
@@ -16,6 +17,7 @@ const routes:Routes = [
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    NbThemeModule.forRoot(),
     RouterModule.forRoot(routes),
     ScullyLibModule
   ],
